@@ -1,0 +1,122 @@
+/* 
+    This is the CSS styling for all pages on this test deployment site
+    I encourage you all to split it up and dynamically load separate CSS
+        files as you see fit
+    I didn't do that here because then I'd be giving you some answers :b
+ */
+
+ :root {
+     --darkBlue: #00243a;
+     --boldBlue: #006A7C;
+     --brightGreen: #00ff9a;
+     --white: #FFFFFF;
+
+     --darkBlueRGBA: rgba(0, 36, 58, 0.5);
+     --boldBlueRGBA: rgba(0, 106, 124, 0.5);
+     --brightGreenRGBA: rgba(0, 255, 154, 0.5);
+ }
+
+ * {
+     margin: 0px;
+     box-sizing: border-box;
+     font-family: 'Montserrat', sans-serif;
+     color: var(--darkBlue);
+ }
+
+ body {
+     background-color: var(--white);
+ }
+
+h1, h4 {
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 7vh;
+    background-image: linear-gradient(to right,
+    var(--darkBlue),
+    var(--boldBlue),
+    var(--brightGreen));
+    padding: 0 5%;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.logo a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.header-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.header-links li {
+    list-style-type: none;
+}
+
+.header-links a {
+    color: var(--darkBlue);
+    text-decoration: underline;
+}
+
+.header-links a:hover,
+.header-links a:focus {
+    color: var(--white);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.img-container {
+    background-image: linear-gradient(to bottom,
+    var(--darkBlueRGBA),
+    var(--boldBlueRGBA),
+    var(--brightGreenRGBA)),
+    url('/images/stedwards-main-office.jpg');
+    background-size: cover;
+    position: absolute;
+    min-width: 100%;
+    min-height: 93%;
+    z-index: -1;
+
+    filter: brightness(30%);
+}
+
+#landing-page-content {
+    max-width: 50vh;
+
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slogan {
+    text-align: center;
+    z-index: 10;
+}
+
+.slogan h1 {
+    font-size: 2.75rem;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.slogan p, 
+.slogan a, 
+.slogan b {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--white);
+}
